@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fs-sans: 'Fraunces', serif;
+    --fs-monserrat: 'Outfit', sans-serif;
+    --primary-clr: hsl(158, 36%, 37%);
+    --secondary-clr: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color:hsl(30, 38%, 92%);
+    margin-top: 70px;
+    max-height: 100vh;
+}
+
+.card{
+    display: flex;
+    margin: auto;
+    max-width: 700px;
+    background-color: var(--secondary-clr);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-image img{
+    max-width: 100%;
+    display: inherit;
+}
+
+.card-content{
+    padding: 3rem;
+    max-width: 50%;
+}
+
+.card-content .title{
+    font-family: var(--fs-monserrat);
+    font-size: 14px;
+    letter-spacing: 9px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+}
+
+.card-content h1{
+    color: hsl(212, 21%, 14%);
+    font-size: 40px;
+    line-height: 0.9em;
+    padding-top: 20px;
+}
+
+.card-content .product{
+    color: hsl(228, 12%, 48%);
+    text-align: left;
+    font-size: 19px;
+    line-height: 1.6em;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.card-content .price{
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    padding: 27px 0;
+}
+
+.card-content .price .after{
+    font-size: 36px;
+    font-family: var(--fs-sans);
+    color: var(--primary-clr);
+}
+
+.card-content .price .before{
+    text-decoration:line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+button{
+    border-radius: 5px;
+    padding: 15px 70px;
+    background-color: var(--primary-clr);
+    color: #ffff;
+    border-style: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        padding: 0 20px;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-image img{
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+    .card-content{
+        padding: 2rem;
+        max-width: 100%;
+    }
+    .card-content h1{
+        color: hsl(212, 21%, 14%);
+        font-size: 40px;
+        line-height: 0.9em;
+        padding-top: 20px;
+    }
+    button{
+        border-radius: 5px;
+        padding: 15px 70px;
+        background-color: var(--primary-clr);
+        color: #ffff;
+        border-style: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-weight: bold;
+    }
+}
